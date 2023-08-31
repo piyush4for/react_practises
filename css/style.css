@@ -1,0 +1,73 @@
+#box{
+    display: flex;
+    justify-content: space-between;
+    /* for width =>justify-content and height=>align-items */
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: grey;
+}
+
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#box2{
+    width: 100px;
+    height: 110px;
+    background-color: coral;
+}
+
+#box3{
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+}
+/*  absolute                                          */
+#car1{
+    width: 100px;
+    height: 120px;
+    background-color: red;
+}
+#car2{
+    position: absolute;
+    width: 110px;
+    top: 90%;
+    left: 40%;
+    height: 90px;
+    background-color: blueviolet;
+}
+#car3{
+    width: 130px;
+    height: 110px;
+    background-color: green;
+}
+
+/* realtaive  */
+
+#rbox{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+#chota{
+    position: absolute;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+/* margin padding */
+.notes{
+    width: 20%;
+    height: 40%;
+    padding: 50px;
+    border-radius: 40%;
+    margin-top: 10%;
+    background-color: yellow;
+}
