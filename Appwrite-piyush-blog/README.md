@@ -12,4 +12,5 @@ Currently, two official plugins are available:
  - to protect from vendor locking(if service like appwrite changed) then i introduced service file in appwrite/auth.js which i modified in class object so that i only need to change service and frontend wouldnt even know that backend changed
  - created APPWRITE file which can be reused in any future projects
  - redux for saving things in react like Islogin or dark/light themes
+ - Used react-hook-form and its Controller from react-hook-form we could also use frwdRef as in button component we used but react-hook-form has it, because we can take field inputs attributes
  
