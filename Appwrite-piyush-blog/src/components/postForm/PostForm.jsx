@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback,useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Input, RTE, Select } from "..";
 import appwriteService from "../../Service/appwrite/config.js";
@@ -40,7 +40,7 @@ export default function PostForm({ post }) {
             if (file) {
                 const fileId = file.$id;
                 data.featuredImage = fileId;
-                const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
+                const dbPost = await appwriteService.createPost({ ...data, userId: file.$id });
 
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
@@ -60,13 +60,13 @@ export default function PostForm({ post }) {
         return "";
     }, []);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const subscription = watch((value, { name }) => {
             if (name === "title") {
                 setValue("slug", slugTransform(value.title), { shouldValidate: true });
             }
         });
-
+        //unsubscribe becoz it wont run and run
         return () => subscription.unsubscribe();
     }, [watch, slugTransform, setValue]);
 
